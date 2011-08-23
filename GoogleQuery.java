@@ -104,6 +104,8 @@ public class GoogleQuery
 				
 				if (counter < Configuration.limit && !newurl.matches(ignore) && !urlsVisited.containsKey(newurl) && !Pattern.matches(".*google.*", newurl) && !Pattern.matches(".*purl.*", newurl)) {
 					addURLsToVisit(newurl);
+					addTitlesToVisit(newurl); ///added these methods here for now, need to clear the html titles and dates later
+					addDates("23.8.2011"); ///added these methods here for now, need to clear the html titles and dates later
 					System.out.println("new url " + newurl);
 					counter++;
 				}//endif
